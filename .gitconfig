@@ -1,0 +1,10 @@
+[user]
+	name = Bill Russell
+	email = beethree@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[alias]
+	co = checkout
+	b = branch

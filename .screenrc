@@ -1,0 +1,22 @@
+shell -$shell
+termcapinfo xterm ti@;te@
+
+#Don't display copyright page
+startup_message off
+
+#Set scrollback to something useful
+defscrollback 30000
+
+#Turn that damn bell off
+vbell off
+
+#Default screens
+screen -t home     0 bash -c "cd ~ && bash"
+screen -t hard_way 1 bash -c "cd $py/hard_way_repo && bash"
+screen -t pp4e     2 bash -c "cd $py/pp4e_repo && bash"
+screen -t lp4e     2 bash -c "cd $py/lp4e_repo && bash"
+select 5
+
+#Hardstatus to make things look pretty
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%m-%d-%Y %{W}%c %{g}]'
